@@ -2,15 +2,15 @@
 
 function onSearchChange(event) {
     searchResult(event.target.value)
-    renderMovies(event.target.value)
+    renderMovies()
 }
 
-async function renderMovies(id) {
+async function renderMovies() {
     const movieListEl = document.querySelector('.movies')
 
     movieListEl.classList += ' movies__loading'
     
-    const movies = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=acf6e413&s=${id}`)
+    const movies = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=acf6e413&s=fast`)
     const moviesData = await movies.json()
     movieListEl.classList.remove('movies__loading')
 
@@ -44,7 +44,6 @@ function searchResult(search) {
     return searchResult.innerHTML = `<h2 class="searchInfo">Search results for: "<span class="red">${search}</span>"</h2>`
 }
 
-function filterMovies(event) {
-    console.log(event.target.value)
-    renderMovies
-}
+setTimeout(() => {
+    renderMovies()
+})
