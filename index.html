@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -26,10 +26,7 @@
                     <a href="" class="nav__link--anchor btn__contact">Contact</a>
                 </li>
             </ul>
-            <div class="background as">
-                <!-- <img src="./assets/netflix frontpage image.jpg" class="background__img" alt=""> -->
-                <div class="background__gradient"></div>
-            </div>
+            <div class="background"></div>
         </nav>
         <header>
             <div class="container">
@@ -59,6 +56,11 @@
                         <div class="searchResult">
                             <h2 class="searchInfo">Search results:</h2>
                         </div>
+                        <select id="filter" onchange="filterMovies(event)">
+                            <option value="" disabled selected>Sort</option>
+                            <option value="NEW_TO_OLD" >Year, newest to oldest</option>
+                            <option value="OLD_TO_NEW" >Year, oldest to newest</option>
+                        </select>
                     </div>
                     <div class="movies">
                         <i class="fas fa-spinner movies__loading--spinner"></i>
