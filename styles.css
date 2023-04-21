@@ -287,6 +287,7 @@ select {
     color: #E50914;
 }
 
+
 .movies__loading--spinner {
     display: none !important;
 }
@@ -294,6 +295,7 @@ select {
 .movies__loading .movies__loading--spinner {
     display: block !important;
 }
+
 
 .fa-spinner {
     animation: rotate 600ms infinite linear;
