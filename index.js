@@ -1,12 +1,9 @@
 // API : https://www.omdbapi.com/?i=tt3896198&apikey=acf6e413&s=fast
 
 const moviesWrapper = document.querySelector('.movies')
-moviesWrapper.classList += ' movies__loading'
 
 //  let default id to be 'fast'
 let id = 'fast'
-
-
 
 async function renderMovies(filter) {
 
@@ -77,9 +74,18 @@ function searchResult(search) {
     return searchResult.innerHTML = `<h2 class="searchInfo">Search results for: "<span class="red">${search}</span>"</h2>`
 }
 
-//  INTIAL LOAD IN LOADING STATE 
+function hello() {
+    const movieFiller = document.querySelector('.filler')
+    movieFiller.remove()
+}
 
-setTimeout(() => {
-    renderMovies()
-},1000)
+
+/** 
+ * limitsation :
+ *  1. hard coded to only show first 6 movies, might implement feature in future where u can select how many you wish to see
+ *  2. if using filter before searching for any movies it will automatically filter for 'fast' movies as defualt id is fast
+ */
+
+
+
  

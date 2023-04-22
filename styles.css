@@ -301,6 +301,18 @@ select {
     animation: rotate 600ms infinite linear;
 }
 
+.filler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 30vh;
+    color: #0A1F44;
+    font-size: 28px;
+    font-weight: 700;
+
+}
+
 @keyframes rotate {
     0% {
         transform: rotate(0)
