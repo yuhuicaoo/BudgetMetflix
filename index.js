@@ -17,7 +17,6 @@ async function renderMovies(filter) {
     
     const moviesList = moviesData.Search.slice(0,6)
 
-
     if (filter === 'NEW_TO_OLD') {
         moviesList.sort((a,b) => b.Year - a.Year)
     }
@@ -60,6 +59,7 @@ function onSearchChange(event) {
     id = event.target.value
     searchResult(id)
     loadingBetweenSearch()
+    document.getElementById('filter').selectedIndex = 0;
     setTimeout(() => {
         renderMovies()
     }, 1000);
