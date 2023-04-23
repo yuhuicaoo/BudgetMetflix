@@ -353,6 +353,10 @@ select {
     .searchIcon {
         right: 64px;
     }
+
+    .filler-prompt {
+        font-size: 36px;
+    }
 }
 
 /* SMALL PHONES */
@@ -394,6 +398,10 @@ select {
 
     .searchInfo {
         font-size: 20px;
+    }
+
+    .filler-prompt {
+        font-size: 28px;
     }
 }
 
