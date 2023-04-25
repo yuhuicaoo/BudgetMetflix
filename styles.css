@@ -240,7 +240,7 @@ input {
 }
 
 .movie {
-    width: calc(100% / 3);
+    width: 25%;
     margin-bottom: 32px;
     padding: 0 16px;
 }
