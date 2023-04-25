@@ -74,11 +74,6 @@ function searchResult(search) {
     return searchResult.innerHTML = `<h2 class="searchInfo">Search results for: "<span class="red">${search}</span>"</h2>`
 }
 
-function hello() {
-    const movieFiller = document.querySelector('.filler')
-    movieFiller.remove()
-}
-
 
 /** 
  * limitsation :
